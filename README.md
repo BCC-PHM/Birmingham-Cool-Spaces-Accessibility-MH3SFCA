@@ -27,14 +27,14 @@ Statistics employed:
 ## Data
 
 | Measure | Dataset / source | Year | Role |
-|------------------|------------------|------------------|------------------|
+|------------------|------------------------------|------------------|------------------|
 | Cool space locations and opening hours | Web-scraped from the [Birmingham City Council Warm Welcome spaces directory](https://www.birmingham.gov.uk/directory/73/warm_welcome_spaces_in_birmingham/category/1859) | 2026 | Supply locations; opening hours |
 | Spatial boundaries | ONS 2021 LSOA boundaries, Birmingham | 2021 | Spatial unit of analysis |
 | Population-weighted centroids | ONS LSOA population-weighted centroids | 2021 | Demand locations (trip origins) |
-| Population estimates | ONS LSOA mid-year population estimates | [year] | Demand size |
-| Walking network and travel distances | OpenStreetMap foot network, routed with a locally hosted OSRM server | [extract date] | Walking distance from each LSOA centroid to each cool space |
+| Population estimates | ONS LSOA mid-year population estimates | Mid-2024 | Demand size |
+| Walking network and travel distances | OpenStreetMap foot network, routed with a locally hosted OSRM server | August 2026 | Walking distance from each LSOA centroid to each cool space |
 | Route validation | Mapbox Walking Directions API | 2026 | Re-checks LSOA–site pairs with a circuity ratio above 3 (likely missing network links) |
-| Walking speeds | 1.39 m/s (adult), reduced by 9% on heat days; 0.89 m/s (older adults) | [source] | Convert distances to heat-day walking times for the adult and older-adult scenarios |
+| Walking speeds | Walking speeds : 1.39 m/s (OSRM default foot speed); 9% heat-day reduction assumed, informed by Obuchi et al. (2021) and evidence on older adults during heatwaves; 0.89 m/s for older adults (Nayak et al.) |  | Convert distances to heat-day walking times for the adult and older-adult scenarios |
 
 ## Main code
 
@@ -59,3 +59,7 @@ Contains OS data © Crown copyright and database right. Source: Office for Natio
 Subal, J., Paal, P., & Krisp, J. M. (2021). Quantifying spatial accessibility of general practitioners by applying a modified huff three-step floating catchment area (MH3SFCA) method. International Journal of Health Geographics, 20(1), 9. <https://doi.org/10.1186/s12942-021-00263-3>
 
 Clark, S. D., & Newing, A. (2025). Assessing spatial accessibility of community pharmacies in England and Wales using floating catchment area techniques. Journal of Pharmaceutical Policy and Practice, 18(1), 2466203. <https://doi.org/10.1080/20523211.2025.2466203>
+
+Obuchi, S. P., Kawai, H., Garbalosa, J. C., Nishida, K., & Murakawa, K. (2021). Walking is regulated by environmental temperature. *Scientific Reports, 11*, 12136. <https://doi.org/10.1038/s41598-021-91633-1>
+
+Lindemann, U., Stotz, A., Beyer, N., Oksa, J., Skelton, D. A., Becker, C., Rapp, K., & Klenk, J. (2017). Effect of indoor temperature on physical performance in older adults during days with normal temperature and heat waves. *International Journal of Environmental Research and Public Health, 14*(2), 186. <https://doi.org/10.3390/ijerph14020186>
