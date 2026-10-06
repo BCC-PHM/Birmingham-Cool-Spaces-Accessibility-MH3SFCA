@@ -1,0 +1,78 @@
+# =====================================================
+# R and RStudio
+# =====================================================
+.Rproj.user
+.Rhistory
+.RData
+.Rdata
+.Ruserdata
+.httr-oauth
+.DS_Store
+.Renviron
+.Renviron.*
+.env
+
+# =====================================================
+# Quarto
+# =====================================================
+.quarto/
+/_freeze/
+*_cache/
+/index_files/
+/HWMI_report_files/
+/HWMI_report.html
+
+# =====================================================
+# Data - exclude everything, no exceptions
+# =====================================================
+/data/
+/output/
+/reading/
+
+# Raw data file types anywhere in the repo
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.rds
+*.RDS
+*.rda
+*.gpkg
+*.geojson
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.tif
+*.tiff
+*.zip
+*.7z
+*.gz
+
+# =====================================================
+# Rendered output formats
+# =====================================================
+*.doc
+*.docx
+*.html
+*.pdf
+*.ppt
+*.pptx
+*.svg
+*.png
+
+# =====================================================
+# Publish the rendered Quarto site
+# Must come last - later patterns win
+# =====================================================
+!/docs/
+!/docs/**
+!/figs/
+!/figs/**
+/.quarto/
+**/*.quarto_ipynb
